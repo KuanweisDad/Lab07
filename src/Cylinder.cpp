@@ -3,31 +3,35 @@
 
 # include "Cylinder.h"
 
+
 double Cylinder :: SurfaceArea(){
-    
-    return ;
+    double temp=2*M_PI*radius*radius+2*M_PI*height*radius;
+    return (temp);
 }
 
 double Cylinder :: Volume(){
-
-    return ;
+    double temp=M_PI*radius*radius*height;
+    return (temp);
 }
 
 double Cylinder :: Circumference(){
-
-    return ;
+    double temp=2*M_PI*radius;
+    return (temp);
 }
 
-istream & operator>>(istream & in, Cylinder & cldr)
+istream & operator>>(istream & in, Cylinder & cyl)
 {
-
-    return ;
+    in >> cyl.radius >> cyl.height;
+    return in;
 }
 
-ostream & operator<<(ostream & out, Cylinder & cldr)
+ostream & operator<<(ostream & out, Cylinder & cyl)
 {
-    
-    return ;
+    out << fixed << std::setprecision(3);
+    out << "Circumference: " << cyl.Circumference() << endl;
+    out << "SurfaceArea: " << cyl.SurfaceArea() << endl;
+    out << "Volume: " << cyl.Volume() << endl;
+    return out;
 }
 
 # endif

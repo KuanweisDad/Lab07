@@ -1,8 +1,9 @@
 # ifndef CYLINDER_H
 # define CYLINDER_H
 
+# include <iomanip>
 # include <iostream>
-
+# include <cmath>
 using namespace std;
 
 class Cylinder
