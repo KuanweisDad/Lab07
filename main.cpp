@@ -4,7 +4,7 @@ int main(){
     Cylinder c;
 
     cin >> c;
-    cout << c;
+    cout  << c;
     
     
     return 0;
